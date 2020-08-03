@@ -1,3 +1,4 @@
+import React from 'react'
 import { GetStaticProps, GetStaticPaths } from 'next'
 
 import { User } from '../../interfaces'
@@ -22,11 +23,7 @@ const StaticPropsDetail = ({ item, errors }: Props) => {
   }
 
   return (
-    <Layout
-      title={`${
-        item ? item.name : 'User Detail'
-      } | Next.js + TypeScript Example`}
-    >
+    <Layout title={`${item ? item.name : 'User Detail'} | Next.js + TypeScript Example`}>
       {item && <ListDetail item={item} />}
     </Layout>
   )
